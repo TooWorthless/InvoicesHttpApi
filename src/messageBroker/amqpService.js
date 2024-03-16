@@ -76,7 +76,7 @@ class AMQPService {
                         
                         const newInvoice = await db.Invoice.create({
                             key: pdfInvoice.invoiceId,
-                            invoice: JSON.stringify(data)
+                            invoice: JSON.stringify(data.invoice)
                         });
                         console.log('newInvoice :>> ', newInvoice.dataValues);
                         
