@@ -23,8 +23,8 @@
 - ### Request( POST /deleteInvoiceById?id=... ),
     ### Response( Deleted item: { "items": [ invoice items objects ], "key": invoice key } )
     <br>
-- ### Request( GET /donwload/invoiceById?id=... ),
+- ### Request( GET /download/invoiceById?id=... ),
     ### Response( invoice pdf document )
     <br>
-- ### Request( GET /donwload/invoices ),
+- ### Request( GET /download/invoices ),
     ### Response( zip invoices folder )
