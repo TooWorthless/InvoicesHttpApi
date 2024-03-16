@@ -10,9 +10,9 @@ const sequelize = new Sequelize({
 const db = {
     Invoice: Invoice(sequelize)
 };
-// await sequelize.sync({ force: true });
 
 
 export {
-    db
+    db,
+    sequelize
 };

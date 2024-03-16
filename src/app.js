@@ -2,14 +2,22 @@ import express from 'express';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import { logErrors, errorHandler } from './utils.js';
+import { logErrors, errorHandler, parseArgs } from './utils.js';
 import { apiRouter } from './api/api.router.js';
 import { amqpService } from './messageBroker/amqpService.js';
 
-import { db } from './database/main.js';
+import { db, sequelize } from './database/main.js';
+
 
 
 const PORT = process.env.PORT;
+
+
+
+const args = parseArgs(process.argv.splice(2, process.argv.length));
+if(args.sync_db) {
+    await sequelize.sync({ force: true });
+}
 
 
 
