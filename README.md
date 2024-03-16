@@ -16,11 +16,15 @@
 ## /api:
 - ### Request( GET /getInvoiceById?id=... ),
     ### Response( { "items": [ invoice items objects ], "key": invoice key } )
+    <br>
 - ### Request( GET /getInvoices ),
     ### Response( { "invoice id": { "items": [ invoice items objects ], "key": invoice key }, "invoice n id": ... } )
+    <br>
 - ### Request( POST /deleteInvoiceById?id=... ),
     ### Response( Deleted item: { "items": [ invoice items objects ], "key": invoice key } )
+    <br>
 - ### Request( GET /donwload/invoiceById?id=... ),
     ### Response( invoice pdf document )
+    <br>
 - ### Request( GET /donwload/invoices ),
     ### Response( zip invoices folder )
