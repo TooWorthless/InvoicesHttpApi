@@ -14,16 +14,16 @@
 <br><br>
 
 ## /api:
-- ### Request( GET /getInvoiceById?id=... ),
+- ### Request( GET /invoices/:id ),
     ### Response( { "items": [ invoice items objects ], "key": invoice key } )
     <br>
-- ### Request( GET /getInvoices ),
+- ### Request( GET /invoices ),
     ### Response( { "invoice id": { "items": [ invoice items objects ], "key": invoice key }, "invoice n id": ... } )
     <br>
-- ### Request( POST /deleteInvoiceById?id=... ),
+- ### Request( DELETE /invoices/:id ),
     ### Response( Deleted item: { "items": [ invoice items objects ], "key": invoice key } )
     <br>
-- ### Request( GET /download/invoiceById?id=... ),
+- ### Request( GET /download/invoices/:id ),
     ### Response( invoice pdf document )
     <br>
 - ### Request( GET /download/invoices ),

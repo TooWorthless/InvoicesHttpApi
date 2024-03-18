@@ -8,9 +8,9 @@ const apiController = {};
 
 apiController.downloadInvoiceById = async (req, res, next) => {
     try {
-        if (!req.query) throw new Error('Incorrect query');
+        if (!req.params) throw new Error('Incorrect params');
 
-        const data = req.query;
+        const data = req.params;
 
         const invoiceId = data.id;
 
@@ -46,9 +46,9 @@ apiController.downloadInvoices = async (req, res, next) => {
 
 apiController.getInvoiceById = async (req, res, next) => {
     try {
-        if (!req.query) throw new Error('Incorrect query');
+        if (!req.params) throw new Error('Incorrect params');
 
-        const data = req.query;
+        const data = req.params;
 
         const invoiceId = data.id;
 
@@ -98,9 +98,9 @@ apiController.getInvoices = async (req, res, next) => {
 
 apiController.deleteInvoiceById = async (req, res, next) => {
     try {
-        if (!req.body) throw new Error('Incorrect body');
+        if (!req.params) throw new Error('Incorrect params');
 
-        const data = req.body;
+        const data = req.params;
 
         const invoiceId = data.id;
 

@@ -6,9 +6,9 @@ import { apiDownloadRouter } from './api.download.router.js';
 const apiRouter = Router();
 
 
-apiRouter.get('/getInvoices', apiController.getInvoices);
-apiRouter.get('/getInvoiceById', apiController.getInvoiceById);
-apiRouter.post('/deleteInvoiceById', apiController.deleteInvoiceById);
+apiRouter.get('/invoices', apiController.getInvoices);
+apiRouter.get('/invoices/:id', apiController.getInvoiceById);
+apiRouter.delete('/invoices/:id', apiController.deleteInvoiceById);
 apiRouter.use('/download', apiDownloadRouter);
 
 

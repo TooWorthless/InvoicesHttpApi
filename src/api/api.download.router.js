@@ -5,7 +5,7 @@ import { apiController } from './api.controller.js';
 const apiDownloadRouter = Router();
 
 
-apiDownloadRouter.get('/invoiceById', apiController.downloadInvoiceById);
+apiDownloadRouter.get('/invoices/:id', apiController.downloadInvoiceById);
 apiDownloadRouter.get('/invoices', apiController.downloadInvoices);
 
 
